@@ -1,0 +1,273 @@
+/* CERTIFICATE SECTION */
+.certificate-section {
+    padding: 5rem 2rem 7rem calc(100px + 2.5rem);
+    background:rgb(0, 0, 0);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Header */
+  .certificate-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    padding: 0 1rem;
+  }
+  
+  .certificate-header h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  .certificate-header h2 span {
+    background: linear-gradient(90deg, #646cff, #a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .section-divider {
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #646cff, #a855f7);
+    margin: 0 auto 1.5rem;
+    border-radius: 2px;
+  }
+  
+  .certificate-header p {
+    color: #aaa;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  /* Certificate Container */
+  .certificate-container {
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 1rem;
+  }
+  
+  /* Certificate Grid */
+  .certificate-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  /* Certificate Card */
+  .certificate-card {
+    background: rgba(20, 20, 20, 0.8);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+  }
+  
+  .certificate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(100, 108, 255, 0.2);
+    border-color: rgba(100, 108, 255, 0.3);
+  }
+  
+  /* Certificate Image */
+  .certificate-image-container {
+    width: 40%;
+    min-height: 250px;
+    overflow: hidden;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .certificate-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .certificate-card:hover .certificate-image {
+    transform: scale(1.03);
+  }
+  
+  /* Certificate Info */
+  .certificate-info {
+    width: 60%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .certificate-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  .certificate-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: #bbb;
+    font-size: 0.9rem;
+  }
+  
+  .meta-icon {
+    margin-right: 0.5rem;
+    color: #a855f7;
+    font-size: 0.9rem;
+  }
+  
+  .certificate-description {
+    color: #bbb;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+  
+  /* Skills Tags */
+  .certificate-skills {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+  
+  .skill-tag {
+    padding: 0.4rem 0.8rem;
+    background: rgba(100, 108, 255, 0.1);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: #646cff;
+  }
+  
+  /* Verify Link */
+  .verify-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #a855f7;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: auto;
+    align-self: flex-start;
+  }
+  
+  .verify-link:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  /* Responsive */
+  @media (max-width: 1200px) {
+    .certificate-section {
+      padding-left: calc(100px + 1.5rem);
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .certificate-grid {
+      grid-template-columns: 1fr;
+    }
+    .certificate-card {
+      flex-direction: column;
+    }
+    .certificate-image-container {
+      width: 100%;
+      height: 200px;
+      border-right: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .certificate-info {
+      width: 100%;
+    }
+  }
+  
+  
+  
+  @media (max-width: 576px) {
+    .certificate-meta {
+      flex-direction: column;
+    }
+    .certificate-card {
+      max-width: 320px;
+    }
+    
+  }
+  @media (max-width: 768px) {
+    .certificate-section {
+      padding: 4rem 1rem 6rem 1rem;
+    }
+  
+    .certificate-header h2 {
+      font-size: 2rem;
+    }
+  
+    .certificate-container {
+      padding: 0;
+    }
+  
+    .certificate-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  
+    .certificate-card {
+      width: 100%;
+      max-width: 350px;
+      margin: 0 auto;
+    }
+    
+  
+    .certificate-image-container {
+      width: 100%;
+      height: 180px;
+      border-right: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+  
+    .certificate-info {
+      width: 100%;
+      padding: 1rem;
+    }
+  
+    .certificate-info h3 {
+      font-size: 1.2rem;
+    }
+  
+    .certificate-description {
+      font-size: 0.9rem;
+    }
+  
+    .skill-tag {
+      font-size: 0.75rem;
+      padding: 0.3rem 0.6rem;
+    }
+  
+    .verify-link {
+      font-size: 0.85rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .certificate-card {
+      width: 100%;
+      max-width: 350px;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .certificate-card {
+      max-width: 320px;
+    }
+  }
+  

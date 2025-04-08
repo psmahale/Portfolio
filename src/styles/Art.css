@@ -1,0 +1,353 @@
+/* Art Gallery Section Styles */
+.art-section {
+  padding: 4rem 2rem 6rem calc(100px + 2.5rem);
+  background: rgb(0, 0, 0);
+  color: #fff;
+  min-height: 100vh;
+  margin-top: 0px;
+}
+
+/* Main Container */
+.art-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Section */
+.art-header {
+  margin-bottom: 3rem;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header-content h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  position: relative;
+  display: inline-block;
+}
+
+.header-content h2 span {
+  background: linear-gradient(90deg, #646cff, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline;
+}
+
+.section-divider {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #646cff, #a855f7);
+  margin: 0 0 1.5rem;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.header-content:hover .section-divider {
+  width: 120px;
+}
+
+.header-content p {
+  color: #aaa;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Category Filters */
+.category-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  align-items: center;
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.8rem;
+  background: rgba(30, 30, 30, 0.8);
+  border: none;
+  border-radius: 50px;
+  color: #aaa;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.filter-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(100, 108, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.filter-btn:hover::before {
+  left: 100%;
+}
+
+.filter-btn.active {
+  background: rgba(100, 108, 255, 0.8);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(100, 108, 255, 0.3);
+}
+
+.filter-btn:hover:not(.active) {
+  color: #fff;
+  background: rgba(50, 50, 50, 0.8);
+}
+
+.filter-btn svg {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.filter-btn:hover svg {
+  transform: scale(1.1);
+}
+
+/* Art Gallery Grid */
+.art-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Art Card Styles */
+.art-card {
+  background: rgba(20, 20, 20, 0.8);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.art-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.7) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.art-card:hover::after {
+  opacity: 1;
+}
+
+.art-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(100, 108, 255, 0.15);
+  border-color: rgba(100, 108, 255, 0.3);
+}
+
+/* Image Container */
+.art-image-container {
+  position: relative;
+  height: 280px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.art-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.art-card:hover .art-image {
+  transform: scale(1.05);
+}
+
+/* Commission Badge */
+.commission-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(30, 30, 30, 0.9);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #a855f7;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  z-index: 2;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(168, 85, 247, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(168, 85, 247, 0);
+  }
+}
+
+/* Art Info Section */
+.art-info {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.art-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.art-card:hover .art-info h3 {
+  color: #a855f7;
+}
+
+.art-description {
+  color: #bbb;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+
+.art-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.art-date {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.art-price {
+  color: #a855f7;
+  font-weight: 600;
+  background: rgba(168, 85, 247, 0.1);
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.art-card:hover .art-price {
+  background: rgba(168, 85, 247, 0.3);
+}
+
+/* No Artworks Message */
+.no-artworks {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #aaa;
+  font-size: 1.2rem;
+  background: rgba(20, 20, 20, 0.5);
+  border-radius: 12px;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+/* Loading State */
+.art-loading {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  color: #646cff;
+}
+
+@media (max-width: 576px) {
+  .header-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .header-content p {
+    font-size: 0.9rem;
+  }
+
+  .section-divider {
+    width: 80px;
+    height: 3px;
+  }
+
+  .art-section {
+    padding: 2rem 1rem 3rem 1rem;
+  }
+
+  .art-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .art-image-container {
+    height: 160px;
+  }
+
+  .art-info h3 {
+    font-size: 1rem;
+  }
+
+  .art-description {
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .art-date,
+  .art-price {
+    font-size: 0.75rem;
+  }
+
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .category-filters {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scrollbar-width: none;
+  }
+
+  .category-filters::-webkit-scrollbar {
+    display: none;
+  }
+}

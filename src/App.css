@@ -1,0 +1,103 @@
+/* App.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color:black; /* Replace with your image */
+  background-size: cover;
+  background-attachment: fixed; /* Fixed background */
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  max-width:100%;
+}
+body::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+
+.app-container {
+  background: url('./assets/background-image.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+section {
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: transparent; /* Transparent background for all sections */
+}
+
+h1,
+h2 {
+  color: #577267;
+}
+
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+  /* Body styling with blurred background image */
+  body {
+    position: relative;
+    background-image: none; /* Remove the original background image */
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(styles/mobilebg.jpg); /* Mobile-specific background image */
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px); /* Slight blur effect for background image */
+    z-index: -1; /* Ensures it stays behind the content */
+  }
+
+  /* Section padding adjustments for mobile */
+  section {
+    padding: 1.5rem; /* Adjust padding for better spacing */
+    margin: 1rem 0; /* Add spacing between sections */
+  }
+
+  /* Typography adjustments for headers */
+  h1,
+  h2 {
+    font-size: 1.5rem;
+    text-align: center; /* Center-align for better readability */
+  }
+
+  /* Button adjustments */
+  button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}

@@ -1,0 +1,194 @@
+.home-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #000;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.home-card {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  background: rgba(30, 30, 30, 0.8);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.home-content {
+  flex: 1;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.profile-photo {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 3px solid rgba(100, 108, 255, 0.3);
+}
+
+.home-title {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #646cff;
+}
+
+.home-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #aaa;
+  font-weight: 300;
+}
+
+.home-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  color: #ddd;
+  max-width: 600px;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: #646cff;
+  color: white;
+  border: 2px solid #646cff;
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: #646cff;
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #646cff;
+  border: 2px solid #646cff;
+}
+
+.btn-outline:hover {
+  background: #646cff;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Tablet view */
+@media (max-width: 992px) {
+  .home-card {
+    flex-direction: column;
+    background: rgba(30, 30, 30, 0.8);
+    align-items: center;
+  }
+
+  .home-content {
+    padding: 2rem;
+    text-align: center;
+    order: 2;
+  }
+
+  .home-image {
+    order: 1;
+    padding-top: 2rem;
+    justify-content: center;
+  }
+
+  .home-title {
+    font-size: 2.5rem;
+  }
+
+  .profile-photo {
+    max-width: 300px;
+  }
+
+  .home-buttons {
+    justify-content: center;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 576px) {
+  .home-section {
+    padding: 1rem;
+  }
+
+  .home-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .home-content {
+    padding: 1.5rem 1rem;
+    align-items: center;
+  }
+
+  .home-title {
+    font-size: 2rem;
+  }
+
+  .home-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .home-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .profile-photo {
+    max-width: 250px;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}

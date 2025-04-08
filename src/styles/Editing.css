@@ -1,0 +1,276 @@
+/* Editing.css (Final Working Version) */
+.editing-section {
+    padding: 5rem 2rem 7rem calc(100px + 2.5rem);
+    background:rgb(0, 0, 0);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Header Styles */
+  .editing-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    padding: 0 1rem;
+  }
+  
+  .editing-header h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  .editing-header h2 span {
+    background: linear-gradient(90deg, #646cff, #a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .section-divider {
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #646cff, #a855f7);
+    margin: 0 auto 1.5rem;
+    border-radius: 2px;
+  }
+  .editing-header:hover .section-divider {
+    width: 120px;
+  }
+  
+  .editing-header p {
+    color: #aaa;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  /* Filter Styles */
+  .filter-container {
+    margin-bottom: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .editing-filters {
+    display: inline-flex;
+    gap: 1rem;
+    padding: 0.5rem;
+    background: rgba(30, 30, 30, 0.5);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .edit-filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.8rem;
+    background: transparent;
+    border: none;
+    border-radius: 50px;
+    color: #aaa;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .edit-filter-btn.active {
+    background: rgba(100, 108, 255, 0.8);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(100, 108, 255, 0.3);
+  }
+  
+  .edit-filter-btn:hover:not(.active) {
+    color: #fff;
+    background: rgba(50, 50, 50, 0.8);
+  }
+  
+  /* Content Container */
+  .content-container {
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 1rem;
+  }
+  
+  /* Projects Grid */
+  .editing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  .edit-project-card {
+    background: rgba(20, 20, 20, 0.8);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .edit-project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(100, 108, 255, 0.2);
+    border-color: rgba(100, 108, 255, 0.3);
+  }
+  
+  /* Thumbnail Styles */
+  .edit-thumbnail-container {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+  }
+  
+  .edit-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .edit-project-card:hover .edit-thumbnail {
+    transform: scale(1.05);
+  }
+  
+  .play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .play-overlay:hover {
+    opacity: 1;
+  }
+  
+  .play-icon {
+    font-size: 3.5rem;
+    color: #ff0000;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.7));
+    transition: transform 0.3s ease;
+  }
+  
+  .play-overlay:hover .play-icon {
+    transform: scale(1.1);
+  }
+  
+  /* Project Info */
+  .edit-project-info {
+    padding: 1.5rem;
+  }
+  
+  .edit-project-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: #fff;
+  }
+  
+  .edit-description {
+    color: #bbb;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Software Tags */
+  .software-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .software-tag {
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  .premiere-pro { background: rgba(157, 78, 221, 0.2); color: #9d4edd; }
+  .after-effects { background: rgba(0, 169, 255, 0.2); color: #00a9ff; }
+  .davinci-resolve { background: rgba(255, 66, 66, 0.2); color: #ff4242; }
+  .lightroom { background: rgba(50, 115, 220, 0.2); color: #3273dc; }
+  .photoshop { background: rgba(0, 152, 255, 0.2); color: #0098ff; }
+  
+  /* Commission Tag */
+  .commission-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(168, 85, 247, 0.2);
+    color: #a855f7;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+  }
+  
+  /* No Projects */
+  .no-projects {
+    text-align: center;
+    padding: 3rem;
+    color: #aaa;
+    font-size: 1.2rem;
+    background: rgba(20, 20, 20, 0.5);
+    border-radius: 12px;
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Responsive */
+  @media (max-width: 1440px) {
+    .editing-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .editing-section {
+      padding-left: calc(100px + 1.5rem);
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .editing-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .editing-section {
+      padding: 4rem 1.5rem 6rem 1.5rem;
+    }
+    .editing-header h2 {
+      font-size: 2.4rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .editing-grid {
+      grid-template-columns: 1fr;
+    }
+    .editing-filters {
+      flex-wrap: wrap;
+      justify-content: center;
+      background: transparent;
+      border: none;
+    }
+    .edit-filter-btn {
+      padding: 0.6rem 1.2rem;
+    }
+  }

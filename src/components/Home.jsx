@@ -10,7 +10,7 @@ const Home = () => {
           <h1 className="home-title">
             Hello, I'm <span className="highlight">Pranav Mahale</span>
           </h1>
-          <p className="home-subtitle">Professional Title</p>
+          <p className="home-subtitle">Computer Engineer</p>
           <p className="home-description">
             I create modern, responsive websites and web applications with focus on 
             user experience and clean code. Let's build something amazing together.

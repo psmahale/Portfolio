@@ -31,7 +31,7 @@ const Navbar = () => {
   ];
 
   const socialItems = [
-    { icon: <FaGithub />, url: "https://github.com/yourusername" },
+    { icon: <FaGithub />, url: "https://github.com/psmahale" },
     { icon: <FaLinkedin />, url: "https://linkedin.com/in/yourprofile" },
     { icon: <FaTwitter />, url: "https://twitter.com/yourhandle" }
   ];
@@ -81,7 +81,7 @@ const Navbar = () => {
           className={`mobile-toggle ${isOpen ? "open" : ""}`}
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle navigation"
-          style={{ left: isOpen ? '300px' : '1.2rem' }}
+          style={{ left: isOpen ? '290px' : '1.2rem' }}
         >
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>

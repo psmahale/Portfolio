@@ -20,7 +20,7 @@ const Editing = () => {
       software: ["Premiere Pro", "After Effects"],
       category: "commission",
       thumbnail: thumbnail1,
-      youtubeLink: "https://youtu.be/example1"
+      youtubeLink: "https://youtube.com/shorts/PE68w-AdAI4?si=K9YJnyLmGBZTnb8B"
     },
     {
       id: 2,

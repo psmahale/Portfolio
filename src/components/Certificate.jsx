@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaCalendarAlt, FaCertificate, FaExternalLinkAlt, FaIdCard } from 'react-icons/fa';
 import '../styles/Certificate.css';
 
@@ -6,14 +5,14 @@ const Certificate = () => {
   const certificates = [
     {
       id: 1,
-      title: "Advanced Video Editing Masterclass",
-      issuer: "Adobe Creative Academy",
+      title: "Professional Restful API Design Using Python Flask",
+      issuer: "Alison Pvt ltd",
       date: "June 2023",
       description: "Mastered advanced techniques in Premiere Pro and After Effects including motion graphics and color grading",
       skills: ["Video Editing", "Color Grading", "Motion Graphics"],
       credentialId: "ADV-VID-789XYZ",
       credentialUrl: "https://example.com/verify/789XYZ",
-      image: "src/assets/p2.jpg"
+      image: "src/assets/Restful_api.jpg"
     },
     {
       id: 2,
@@ -24,7 +23,62 @@ const Certificate = () => {
       skills: ["Composition", "Lighting", "Post-Processing"],
       credentialId: "NK-COMP-456ABC",
       credentialUrl: "https://example.com/verify/456ABC",
-      image: "src/assets/p4.jpg"
+      image: "src/assets/IBM.jpg"
+    },
+    {
+      id: 3,
+      title: "Photography Composition Professional",
+      issuer: "Nikon School Online",
+      date: "March 2023",
+      description: "Completed professional training in advanced composition techniques and lighting scenarios",
+      skills: ["Composition", "Lighting", "Post-Processing"],
+      credentialId: "NK-COMP-456ABC",
+      credentialUrl: "https://example.com/verify/456ABC",
+      image: "src/assets/Hackathon.jpg"
+    },
+    {
+      id: 4,
+      title: "Photography Composition Professional",
+      issuer: "Nikon School Online",
+      date: "March 2023",
+      description: "Completed professional training in advanced composition techniques and lighting scenarios",
+      skills: ["Composition", "Lighting", "Post-Processing"],
+      credentialId: "NK-COMP-456ABC",
+      credentialUrl: "https://example.com/verify/456ABC",
+      image: "src/assets/AI&ML_Wokshop.jpg"
+    },
+    {
+      id: 5,
+      title: "Photography Composition Professional",
+      issuer: "Nikon School Online",
+      date: "March 2023",
+      description: "Completed professional training in advanced composition techniques and lighting scenarios",
+      skills: ["Composition", "Lighting", "Post-Processing"],
+      credentialId: "NK-COMP-456ABC",
+      credentialUrl: "https://example.com/verify/456ABC",
+      image: "src/assets/Robotics.jpg"
+    },
+    {
+      id: 6,
+      title: "Photography Composition Professional",
+      issuer: "Nikon School Online",
+      date: "March 2023",
+      description: "Completed professional training in advanced composition techniques and lighting scenarios",
+      skills: ["Composition", "Lighting", "Post-Processing"],
+      credentialId: "NK-COMP-456ABC",
+      credentialUrl: "https://example.com/verify/456ABC",
+      image: "src/assets/Cpp.jpg"
+    },
+    {
+      id: 7,
+      title: "Photography Composition Professional",
+      issuer: "Nikon School Online",
+      date: "March 2023",
+      description: "Completed professional training in advanced composition techniques and lighting scenarios",
+      skills: ["Composition", "Lighting", "Post-Processing"],
+      credentialId: "NK-COMP-456ABC",
+      credentialUrl: "https://example.com/verify/456ABC",
+      image: "src/assets/SVN.jpg"
     },
     // Add 3-5 more certificates
   ];

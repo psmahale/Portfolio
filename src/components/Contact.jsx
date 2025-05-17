@@ -1,5 +1,5 @@
-// Contact.js (Improved)
-import React, { useState } from 'react';
+// Contact.js (Improved & Integrated with Formspree)
+import { useState } from 'react';
 import { FaEnvelope, FaInstagram, FaPaperPlane, FaPhone } from 'react-icons/fa';
 import '../styles/Contact.css';
 
@@ -20,16 +20,18 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
-      const response = await fetch('https://formspree.io/f/your-form-id', {
+      const response = await fetch('https://formspree.io/f/mzzroyag', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
         body: JSON.stringify({
-          ...formData,
-          _cc: ['pranavmahale04@gmail.com', 'pranavmahale04@outlook.com']
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
         }),
       });
 
@@ -77,7 +79,7 @@ const Contact = () => {
               <div className="info-details">
                 <h4>Email</h4>
                 <a href="mailto:pranavmahale04@gmail.com">pranavmahale04@gmail.com</a>
-                <a href="mailto:pranavmahale04@outlook.com">pranavmahale04@outlook.com</a>
+                <a href="mailto:"></a>
               </div>
             </div>
 
@@ -88,17 +90,17 @@ const Contact = () => {
               <div className="info-details">
                 <h4>Instagram</h4>
                 <a 
-                  href="https://instagram.com/artnav360" 
+                  href="https://www.instagram.com/artnav360?igsh=MXB1ZTlsOWNqNjg3eg==" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
-                  @artnav360
+                  artnav360
                 </a>
               </div>
             </div>
           </div>
 
-          {/* Improved Contact Form */}
+          {/* Contact Form */}
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="name">Your Name</label>
